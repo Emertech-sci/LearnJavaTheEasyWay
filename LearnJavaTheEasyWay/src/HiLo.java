@@ -24,7 +24,7 @@ public class HiLo {
             After that let's print the number!
          */
         int theNumber = (int) (Math.random() * 100 + 1);
-        System.out.println(theNumber);
+        //System.out.println(theNumber);
 
         //(ES) Prueba generar un numero entre 1-10 y 1-1,000
         //(EN) Try to generate a number between 1-10 & 1-1,000
@@ -35,5 +35,12 @@ public class HiLo {
         int oneToThousand = (int) (Math.random() * 1000 +1);
         System.out.println(oneToThousand);
          */
+        int guess = 0;
+        System.out.println("Please guess a number between 1 and 100: ");
+        guess = scan.nextInt();
+        System.out.println(String.format("You entered %d", guess));
+
+        // (ES) A partir de aquí usaremos loops para poder darle interactividad al juego
+        // (EN) From here, we will use loops to add interactivity to the game
     }
 }
