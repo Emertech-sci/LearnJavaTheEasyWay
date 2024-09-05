@@ -36,11 +36,20 @@ public class HiLo {
         System.out.println(oneToThousand);
          */
         int guess = 0;
-        System.out.println("Please guess a number between 1 and 100: ");
-        guess = scan.nextInt();
-        System.out.println(String.format("You entered %d", guess));
-
         // (ES) A partir de aquí usaremos loops para poder darle interactividad al juego
         // (EN) From here, we will use loops to add interactivity to the game
+        while (guess != theNumber) {
+            System.out.println("Please guess a number between 1 and 100: ");
+            guess = scan.nextInt();
+            //(ES) Añadimos un if-else statement para decirle al usuario si es un numero muy grande o muy pequeño.
+            if (guess < theNumber)
+                System.out.println(guess + " is too low. Try again.");
+            else if (guess > theNumber)
+                System.out.println(guess + " is too high. try again.");
+            else
+                System.out.println(guess + " is correct. You win!");
+
+        }
+
     }
 }
