@@ -10,33 +10,18 @@ public class HiLo {
         Scanner scan = new Scanner(System.in);
         String playAgain = "";
         do {
-            /* (ES) Crear un numero aleatorio para que el usuario adivine, haremos uso de la clase Math.
-            Primero creamos una variable de tipo int para almacenar el numero aleatorio.
-            El metodo Math.random() genra un numero entre 0 y 0..99999 por eso lo multiplicamos por 100
-            y posteriormente sumamos 1 para obtener el valor de 100, los decimales son descartados gracias
-            a que almacenamos el valor en una variable de tipo int que se elimina los decimales (este proceso
-            es llamado casting).
-            Despues de ello imprimamos el numero!
+            /* (ES) El metodo Math.random() genra un numero entre 0 y 0..99999 por eso lo multiplicamos por 100
+            y posteriormente sumamos 1 para obtener el valor de 100.
 
-            (EN)Create a random number to the user to guess, we will use the Math class.
-            First, we create a vvariable of type int to save the random number.
-            The method AMth.random() generates a number between 0 and 0.99999 the we times it by 100,
+            (EN) The method Math.random() generates a number between 0 and 0.99999 then times it by 100,
             then we add a 10 to obtain the value 100. The decimal are eliminated by saving the value
-            of the variable into a int type (this process is called a cast).
-            After that let's print the number!
+            of the variable into an int type (this process is called a cast).
             */
             int theNumber = (int) (Math.random() * 100 + 1);
             //System.out.println(theNumber);
 
             //(ES) Prueba generar un numero entre 1-10 y 1-1,000
             //(EN) Try to generate a number between 1-10 & 1-1,000
-            /*
-            int oneToTen = (int) (Math.random() * 10 + 1);
-            System.out.println(oneToTen);
-
-            int oneToThousand = (int) (Math.random() * 1000 +1);
-            System.out.println(oneToThousand);
-            */
             int guess = 0;
             // (ES) A partir de aquí usaremos loops para poder darle interactividad al juego
             // (EN) From here, we will use loops to add interactivity to the game
@@ -54,5 +39,7 @@ public class HiLo {
             System.out.println("would you like to play again? (y/n)");
             playAgain = scan.next();
         } while(playAgain.equalsIgnoreCase("y"));
+        System.out.println("Thank you for playing! Goodbye");
+        scan.close();
     }
 }
